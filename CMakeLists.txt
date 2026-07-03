@@ -1,13 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
-project(test LANGUAGES CXX)
+project(avl LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_subdirectory(src/bst)
+add_subdirectory(src)
+add_subdirectory(tests)
 
-add_executable(test src/main.cpp)
-
-target_link_libraries(test PRIVATE
-        bst
-)
